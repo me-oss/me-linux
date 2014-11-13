@@ -1,0 +1,9 @@
+#!/bin/sh
+
+INITRAMFS=`grep CONFIG_INITRAMFS_SOURC .config | awk 'BEGIN{FS="\""} {print $2}'`
+
+make
+cp -a drivers/scsi/w55fa93_sdio.ko $INITRAMFS/usr
+cp -a drivers/scsi/nuvoton_nand/nanddrv.ko $INITRAMFS/usr
+make
+

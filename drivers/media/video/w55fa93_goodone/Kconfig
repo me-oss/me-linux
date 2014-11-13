@@ -1,0 +1,25 @@
+config W55FA93_VIDEOIN
+	bool "W55FA93 video in support"
+	depends on ARCH_W55FA93 && VIDEO_DEV
+	---help---
+	  Say Y here if you have W55FA93 chip(nuvoTon).
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called w55fa93_videoin.
+
+config SENSOR_OV9660
+	bool "W55FA93 OV9660 sensor support"
+	depends on ARCH_W55FA93 && VIDEO_DEV && W55FA93_VIDEOIN
+	---help---
+	  Say Y here if you have W55FA93 chip(nuvoTon).
+
+config SENSOR_OV7670
+	bool "W55FA93 OV7670 sensor support"
+	depends on ARCH_W55FA93 && VIDEO_DEV && W55FA93_VIDEOIN
+	---help---
+	  Say Y here if you have W55FA93 chip(nuvoTon).
+
+
+
+
+
